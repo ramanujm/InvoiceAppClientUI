@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+
+  <script src="lib/onsen/js/onsenui.min.js"></script>
+  <script src="lib/onsen/js/angular/angular.min.js"></script>
+  <script src="lib/onsen/js/angular-onsenui.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <ons-navigator var="myNavigator">
+    <ons-page modifier="material">
+      <ons-toolbar modifier="material noshadow" class="contact-list-background-color">
+        <div class="center">Register</div>
+        <!-- <div class="right">
+          <ons-toolbar-button modifier="material">
+            <ons-icon icon="md-search"></ons-icon>
+          </ons-toolbar-button>
+          <ons-toolbar-button modifier="material">
+            <ons-icon icon="md-more-vert"></ons-icon>
+          </ons-toolbar-button>
+        </div> -->
+      </ons-toolbar>
+
+      <!-- <ons-fab position="right bottom" class="contact-list-background-color" ng-click="myNavigator.pushPage('html/add_contact.html', {animation: 'fade', animationOptions: {duration: 0.2, delay: 0.2, timing: linear}})">
+        <ons-ripple></ons-ripple>
+        <ons-icon icon="md-account-add"></ons-icon>
+      </ons-fab> -->
+
+      <ons-tabbar position="top" modifier="material" animation="slide">
+        <ons-tab persistent page="html/fav_list.html" class="contact-list-background-color">
+          <ons-ripple>favorites</ons-ripple>
+        </ons-tab>
+        <ons-tab persistent page="html/all_list.html" active class="contact-list-background-color">
+          <ons-ripple>all contacts</ons-ripple>
+        </ons-tab>
+      </ons-tabbar>
+    </ons-page>
+  </ons-navigator>
+</body>
+
+</html>
