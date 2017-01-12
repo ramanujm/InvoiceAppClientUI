@@ -22,29 +22,45 @@
     <ons-page modifier="material">
       <ons-toolbar modifier="material noshadow" class="contact-list-background-color">
         <div class="center">Register</div>
-        <!-- <div class="right">
-          <ons-toolbar-button modifier="material">
-            <ons-icon icon="md-search"></ons-icon>
-          </ons-toolbar-button>
-          <ons-toolbar-button modifier="material">
-            <ons-icon icon="md-more-vert"></ons-icon>
-          </ons-toolbar-button>
-        </div> -->
       </ons-toolbar>
-
-      <!-- <ons-fab position="right bottom" class="contact-list-background-color" ng-click="myNavigator.pushPage('html/add_contact.html', {animation: 'fade', animationOptions: {duration: 0.2, delay: 0.2, timing: linear}})">
-        <ons-ripple></ons-ripple>
-        <ons-icon icon="md-account-add"></ons-icon>
-      </ons-fab> -->
-
-      <ons-tabbar position="top" modifier="material" animation="slide">
-        <ons-tab persistent page="html/fav_list.html" class="contact-list-background-color">
-          <ons-ripple>favorites</ons-ripple>
-        </ons-tab>
-        <ons-tab persistent page="html/all_list.html" active class="contact-list-background-color">
-          <ons-ripple>all contacts</ons-ripple>
-        </ons-tab>
-      </ons-tabbar>
+      <ons-list-item modifier="material">
+			<div class="list__item__left">
+				<ons-icon icon="md-account"></ons-icon>
+			</div>
+			<div class="list__item__center">
+				<ons-material-input label="First name"></ons-material-input>
+			</div>
+		</ons-list-item>
+		<ons-list-item modifier="material">
+			<div class="list__item__left"></div>
+			<div class="list__item__center">
+				<ons-material-input label="Last name"></ons-material-input>
+			</div>
+		</ons-list-item>
+		<ons-list-item modifier="material">
+			<div class="list__item__left">
+				<ons-icon icon="md-email"></ons-icon>
+			</div>
+			<div class="list__item__center">
+				<ons-material-input label="e-mail"></ons-material-input>
+			</div>
+		</ons-list-item>
+		<ons-list-item modifier="material">
+			<div class="list__item__left">
+				<ons-icon icon="md-lock"></ons-icon>
+			</div>
+			<div class="list__item__center">
+				<ons-material-input label=Passwordl"></ons-material-input>
+			</div>
+		</ons-list-item>
+		<md-input-container flex="50">
+        <label>Industry</label>
+        <md-select name="company" ng-model="company" required>
+          <md-option value="1">Electrical</md-option>
+          <md-option value="2">Mechanical</md-option>
+          <md-option value="3">Plumber</md-option>
+        </md-select>
+      </md-input-container>
     </ons-page>
   </ons-navigator>
 </body>
